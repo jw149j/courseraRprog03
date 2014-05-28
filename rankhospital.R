@@ -7,7 +7,7 @@ filtered<-read.csv("outcome-of-care-measures.csv",colClasses="character",na.stri
 validOuts<- list("heart attack"=11L,"heart failure"=17L,"pneumonia"=23L) 
 ## split the data on the state 2 letter identifier
 hh<-split(filtered,filtered$State)
-## list the valid names in the data se::error flagged if not
+## list the valid names in the data set::error flagged if not
 namit<-names(hh)
 ## check the input state variable is in this set - 
 if(!(state %in% namit)){stop("invalid state")}

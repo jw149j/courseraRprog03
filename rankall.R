@@ -57,8 +57,8 @@ retty
 
 rankByState<-function(stateData,outcome,num){
   #print(c(stateData,outcome)) 
-  thisData<-transform(hh[stateData])
- # thisData<-otherData[complete.cases(otherData[,as.integer(outcome)]),]
+  otherData<-transform(hh[stateData])
+  thisData<-otherData[complete.cases(otherData[,as.integer(outcome)]),]
   suppressWarnings(thatData<-thisData[order(as.numeric(thisData[,as.integer(outcome)]),thisData[,2]),]) 
  # return()
 #  <-transform(stateData)
